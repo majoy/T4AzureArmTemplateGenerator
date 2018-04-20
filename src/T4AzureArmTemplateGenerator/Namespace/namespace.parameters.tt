@@ -1,0 +1,35 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(ProjectDir)bin\Debug\Newtonsoft.Json.dll" #>
+<#@ assembly name="$(ProjectDir)bin\Debug\T4AzureArmTemplateGenerator.dll" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="Newtonsoft.Json" #>
+<#@ import namespace="Newtonsoft.Json.Serialization" #>
+<#@ import namespace="T4AzureArmTemplateGenerator" #>
+<#@ import namespace="T4AzureArmTemplateGenerator.Namespace" #>
+<#@ import namespace="T4AzureArmTemplateGenerator.Namespace.Input" #>
+<#@ import namespace="T4AzureArmTemplateGenerator.Namespace.Output" #>
+<#@ output extension="/" #>
+<#@ include file="../TemplateFileManager.CS.ttinclude" #>
+<#
+
+// TemplateFileManager.CS.ttinclude was obtained from https://www.nuget.org/packages/T4.TemplateFileManager/
+
+// Custom tool to use: TextTemplatingFileGenerator
+
+string parameterFileName = "namespace.parameters-{0}.json";
+NamespaceRootOutputJsonConverter converter = new NamespaceRootOutputJsonConverter(new NamespaceRootOutputParser());
+Dictionary<string, string> parametersOutput = converter.ToJson(File.ReadAllText(Path.ChangeExtension(Host.TemplateFile,".input.json")));
+
+var manager = TemplateFileManager.Create(this);
+foreach(KeyValuePair<string, string> kvp in parametersOutput) {
+	manager.StartNewFile(string.Format(parameterFileName, kvp.Key));
+	this.Write(kvp.Value);
+}
+manager.Process();
+#>

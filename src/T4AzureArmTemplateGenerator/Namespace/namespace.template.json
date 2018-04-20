@@ -1,0 +1,42 @@
+﻿{
+  "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "namespaceObjects": {
+      "type": "array"
+    },
+    "queueObjects": {
+      "type": "array"
+    }
+  },
+  "resources": [
+    {
+      "apiVersion": "2017-04-01",
+      "name": "[toLower(parameters('namespaceObjects')[copyIndex()].name)]",
+      "location": "[parameters('namespaceObjects')[copyIndex()].location]",
+      "type": "Microsoft.ServiceBus/namespaces",
+      "tags": "[parameters('namespaceObjects')[copyIndex()].tags]",
+      "sku": {
+        "name": "[parameters('namespaceObjects')[copyIndex()].sku]"
+      },
+      "copy": {
+        "name": "sbcopy",
+        "count": "[length(parameters('namespaceObjects'))]"
+      },
+      "properties": {}
+    },
+    {
+      "apiVersion": "2017-04-01",
+      "name": "[toLower(concat(parameters('queueObjects')[copyIndex()].namespaceName,'/',parameters('queueObjects')[copyIndex()].queueName))]",
+      "location": "[parameters('queueObjects')[copyIndex()].namespaceLocation]",
+      "type": "Microsoft.ServiceBus/namespaces/queues",
+      "tags": "[parameters('queueObjects')[copyIndex()].tags]",
+      "dependsOn": [ "sbcopy" ],
+      "properties": "[parameters('queueObjects')[copyIndex()].queueProperties]",
+      "copy": {
+        "name": "sbqueuecopy",
+        "count": "[length(parameters('queueObjects'))]"
+      }
+    }
+  ]
+}

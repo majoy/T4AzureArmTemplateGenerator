@@ -1,0 +1,164 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "namespaceObjects": {
+      "value": [
+        {
+          "name": "amlcollector-servicebus-prd-wr",
+          "location": "westeurope",
+          "sku": "Standard",
+          "tags": {
+            "ownerContact": "paycom-team@worldremit.com",
+            "team": "Paycom",
+            "project": "CSRE-2324",
+            "runModel": "247"
+          }
+        },
+        {
+          "name": "amlcollector-eurn-servicebus-prd-wr",
+          "location": "northeurope",
+          "sku": "Standard",
+          "tags": {
+            "ownerContact": "paycom-team@worldremit.com",
+            "team": "Paycom",
+            "project": "CSRE-2324",
+            "runModel": "247"
+          }
+        }
+      ]
+    },
+    "queueObjects": {
+      "value": [
+        {
+          "namespaceName": "amlcollector-servicebus-prd-wr",
+          "namespaceLocation": "westeurope",
+          "queueName": "etl-etlqueue-prd-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "paycom-team@worldremit.com",
+            "team": "Paycom",
+            "project": "CSRE-2324",
+            "runModel": "247"
+          }
+        },
+        {
+          "namespaceName": "amlcollector-servicebus-prd-wr",
+          "namespaceLocation": "westeurope",
+          "queueName": "alertgen-reportbatchqueue-prd-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "paycom-team@worldremit.com",
+            "team": "Paycom",
+            "project": "CSRE-2324",
+            "runModel": "247"
+          }
+        },
+        {
+          "namespaceName": "amlcollector-eurn-servicebus-prd-wr",
+          "namespaceLocation": "northeurope",
+          "queueName": "etl-etlqueue-prd-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "paycom-team@worldremit.com",
+            "team": "Paycom",
+            "project": "CSRE-2324",
+            "runModel": "247"
+          }
+        },
+        {
+          "namespaceName": "amlcollector-eurn-servicebus-prd-wr",
+          "namespaceLocation": "northeurope",
+          "queueName": "alertgen-reportbatchqueue-prd-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "paycom-team@worldremit.com",
+            "team": "Paycom",
+            "project": "CSRE-2324",
+            "runModel": "247"
+          }
+        },
+        {
+          "namespaceName": "amlcollector-servicebus-prd-wr",
+          "namespaceLocation": "westeurope",
+          "queueName": "etl-etlqueue-prd-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "paycom-team@worldremit.com",
+            "team": "Paycom",
+            "project": "CSRE-2324",
+            "runModel": "247"
+          }
+        },
+        {
+          "namespaceName": "amlcollector-servicebus-prd-wr",
+          "namespaceLocation": "westeurope",
+          "queueName": "alertgen-reportbatchqueue-prd-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "paycom-team@worldremit.com",
+            "team": "Paycom",
+            "project": "CSRE-2324",
+            "runModel": "247"
+          }
+        },
+        {
+          "namespaceName": "amlcollector-eurn-servicebus-prd-wr",
+          "namespaceLocation": "northeurope",
+          "queueName": "etl-etlqueue-prd-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "paycom-team@worldremit.com",
+            "team": "Paycom",
+            "project": "CSRE-2324",
+            "runModel": "247"
+          }
+        },
+        {
+          "namespaceName": "amlcollector-eurn-servicebus-prd-wr",
+          "namespaceLocation": "northeurope",
+          "queueName": "alertgen-reportbatchqueue-prd-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "paycom-team@worldremit.com",
+            "team": "Paycom",
+            "project": "CSRE-2324",
+            "runModel": "247"
+          }
+        }
+      ]
+    }
+  }
+}

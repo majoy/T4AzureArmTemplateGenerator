@@ -1,0 +1,76 @@
+﻿{
+    "locationDefinitions": [
+        {
+            "locationName": "westeurope",
+            "namespaceNameSuffix": "servicebus-{0}-wr"
+        },
+        {
+            "locationName": "northeurope",
+            "namespaceNameSuffix": "eurn-servicebus-{0}-wr"
+        }
+    ],
+
+    "namespaces": [
+        {
+            "namespaceNamePrefix": "amlcollector",
+            "sku": "Standard",
+            "tags": {
+                "ownerContact": "paycom-team@worldremit.com",
+                "team": "Paycom",
+                "project": "CSRE-2324",
+                "runModel": "247"
+            },
+            "namespaceTargetLocations": [
+                {
+                    "locationName": "westeurope",
+                    "namespaceEnvironments": [ "nonprd", "prd" ]
+                },
+                {
+                    "locationName": "northeurope",
+                    "namespaceEnvironments": [ "nonprd", "prd" ]
+                }
+            ],
+            "queueTargetLocations": [
+                {
+                    "locationName": "westeurope",
+                    "namespaceEnvironmentName": "nonprd",
+                    "queueEnvironments": [ "dev", "tst" ]
+                },
+                {
+                    "locationName": "northeurope",
+                    "namespaceEnvironmentName": "nonprd",
+                    "queueEnvironments": [ "dev", "tst" ]
+                },
+                {
+                    "locationName": "westeurope",
+                    "namespaceEnvironmentName": "prd",
+                    "queueEnvironments": [ "prd" ]
+                },
+                {
+                    "locationName": "northeurope",
+                    "namespaceEnvironmentName": "prd",
+                    "queueEnvironments": [ "prd" ]
+                }
+            ],
+            "queues": [
+                {
+                    "queueNamePrefix": "etl-etlqueue",
+
+                    "properties": {
+                        "maxSizeInMegabytes": 1024,
+                        "requiresDuplicateDetection": true,
+                        "deadLetteringOnMessageExpiration": true
+                    }
+                },
+                {
+                    "queueNamePrefix": "alertgen-reportbatchqueue",
+                    "properties": {
+                        "maxSizeInMegabytes": 1024,
+                        "requiresDuplicateDetection": true,
+                        "deadLetteringOnMessageExpiration": true
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,164 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "namespaceObjects": {
+      "value": [
+        {
+          "name": "some-namespace-prefix-westerneurope-servicebus-qa-add-to-the-end",
+          "location": "westeurope",
+          "sku": "Standard",
+          "tags": {
+            "ownerContact": "team@company.com",
+            "team": "Team",
+            "project": "Order Tracker",
+            "runModel": "001"
+          }
+        },
+        {
+          "name": "some-namespace-prefix-northeurope-servicebus-qa-add-to-the-end",
+          "location": "northeurope",
+          "sku": "Standard",
+          "tags": {
+            "ownerContact": "team@company.com",
+            "team": "Team",
+            "project": "Order Tracker",
+            "runModel": "001"
+          }
+        }
+      ]
+    },
+    "queueObjects": {
+      "value": [
+        {
+          "namespaceName": "some-namespace-prefix-westerneurope-servicebus-qa-add-to-the-end",
+          "namespaceLocation": "westeurope",
+          "queueName": "new-orders-queue-qa-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "team@company.com",
+            "team": "Team",
+            "project": "Order Tracker",
+            "runModel": "001"
+          }
+        },
+        {
+          "namespaceName": "some-namespace-prefix-westerneurope-servicebus-qa-add-to-the-end",
+          "namespaceLocation": "westeurope",
+          "queueName": "orders-processed-queue-qa-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "team@company.com",
+            "team": "Team",
+            "project": "Order Tracker",
+            "runModel": "001"
+          }
+        },
+        {
+          "namespaceName": "some-namespace-prefix-northeurope-servicebus-qa-add-to-the-end",
+          "namespaceLocation": "northeurope",
+          "queueName": "new-orders-queue-qa-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "team@company.com",
+            "team": "Team",
+            "project": "Order Tracker",
+            "runModel": "001"
+          }
+        },
+        {
+          "namespaceName": "some-namespace-prefix-northeurope-servicebus-qa-add-to-the-end",
+          "namespaceLocation": "northeurope",
+          "queueName": "orders-processed-queue-qa-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "team@company.com",
+            "team": "Team",
+            "project": "Order Tracker",
+            "runModel": "001"
+          }
+        },
+        {
+          "namespaceName": "some-namespace-prefix-westerneurope-servicebus-qa-add-to-the-end",
+          "namespaceLocation": "westeurope",
+          "queueName": "new-orders-queue-qa-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "team@company.com",
+            "team": "Team",
+            "project": "Order Tracker",
+            "runModel": "001"
+          }
+        },
+        {
+          "namespaceName": "some-namespace-prefix-westerneurope-servicebus-qa-add-to-the-end",
+          "namespaceLocation": "westeurope",
+          "queueName": "orders-processed-queue-qa-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "team@company.com",
+            "team": "Team",
+            "project": "Order Tracker",
+            "runModel": "001"
+          }
+        },
+        {
+          "namespaceName": "some-namespace-prefix-northeurope-servicebus-qa-add-to-the-end",
+          "namespaceLocation": "northeurope",
+          "queueName": "new-orders-queue-qa-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "team@company.com",
+            "team": "Team",
+            "project": "Order Tracker",
+            "runModel": "001"
+          }
+        },
+        {
+          "namespaceName": "some-namespace-prefix-northeurope-servicebus-qa-add-to-the-end",
+          "namespaceLocation": "northeurope",
+          "queueName": "orders-processed-queue-qa-wr",
+          "queueProperties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          },
+          "tags": {
+            "ownerContact": "team@company.com",
+            "team": "Team",
+            "project": "Order Tracker",
+            "runModel": "001"
+          }
+        }
+      ]
+    }
+  }
+}

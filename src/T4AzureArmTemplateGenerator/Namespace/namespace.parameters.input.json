@@ -1,0 +1,87 @@
+﻿{
+  "namespaceNameEndSuffix":  "add-to-the-end", 
+  "locationDefinitions": [
+    {
+      "locationName": "westeurope",
+      "namespaceNameSuffix": "westerneurope-servicebus"
+    },
+    {
+      "locationName": "northeurope",
+      "namespaceNameSuffix": "northeurope-servicebus"
+    }
+  ],
+
+  "namespaces": [
+    {
+      "namespaceNamePrefix": "some-namespace-prefix",
+      "sku": "Standard",
+      "tags": {
+        "ownerContact": "team@company.com",
+        "team": "Team",
+        "project": "Order Tracker",
+        "runModel": "001"
+      },
+      "namespaceTargetLocations": [
+        {
+          "locationName": "westeurope",
+          "namespaceEnvironments": [ "dev", "qa", "prod" ]
+        },
+        {
+          "locationName": "northeurope",
+          "namespaceEnvironments": [ "dev", "qa", "prod" ]
+        }
+      ],
+      "queueTargetLocations": [
+        {
+          "locationName": "westeurope",
+          "namespaceEnvironmentName": "dev",
+          "queueEnvironments": [ "dev" ]
+        },
+        {
+          "locationName": "westeurope",
+          "namespaceEnvironmentName": "qa",
+          "queueEnvironments": [ "qa" ]
+        },
+        {
+          "locationName": "westeurope",
+          "namespaceEnvironmentName": "prod",
+          "queueEnvironments": [ "prod" ]
+        },
+        {
+          "locationName": "northeurope",
+          "namespaceEnvironmentName": "dev",
+          "queueEnvironments": [ "dev" ]
+        },
+        {
+          "locationName": "northeurope",
+          "namespaceEnvironmentName": "qa",
+          "queueEnvironments": [ "qa" ]
+        },
+        {
+          "locationName": "northeurope",
+          "namespaceEnvironmentName": "prod",
+          "queueEnvironments": [ "prod" ]
+        }
+      ],
+      "queues": [
+        {
+          "queueNamePrefix": "new-orders-queue",
+
+          "properties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          }
+        },
+        {
+          "queueNamePrefix": "orders-processed-queue",
+          "properties": {
+            "maxSizeInMegabytes": 1024,
+            "requiresDuplicateDetection": true,
+            "deadLetteringOnMessageExpiration": true
+          }
+        }
+      ]
+    }
+  ]
+}
