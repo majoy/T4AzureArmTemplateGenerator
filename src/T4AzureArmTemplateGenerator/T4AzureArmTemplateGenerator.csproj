@@ -194,6 +194,15 @@
     <None Include="app.config" />
     <Content Include="Namespace\namespace.template.json" />
     <Content Include="Namespace\namespace.parameters.input.json" />
+    <None Include="Namespace\namespace.parameters-dev.json">
+      <DependentUpon>namespace.parameters.tt</DependentUpon>
+    </None>
+    <None Include="Namespace\namespace.parameters-prod.json">
+      <DependentUpon>namespace.parameters.tt</DependentUpon>
+    </None>
+    <None Include="Namespace\namespace.parameters-qa.json">
+      <DependentUpon>namespace.parameters.tt</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <Content Include="TemplateFilemanager.CS.ttinclude" />
   </ItemGroup>
