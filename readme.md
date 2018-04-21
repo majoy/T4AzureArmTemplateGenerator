@@ -1,4 +1,4 @@
-﻿# T4AzureArmTemplateGenerator
+﻿# T4 Azure Arm Template Generator
 This library contains T4 templates for auto-generating Azure ARM template parameter files for environments that are custom defined. Example of environments: "dev", "qa", "prod"
 
 ## Requirements:
