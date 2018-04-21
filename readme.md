@@ -20,11 +20,6 @@ This means that if you have an array of children with grandchildren resources th
 * To cut down the amount of time a developer or devops engineer would spend creating json ARM template parameter files
 * To ensure that there is consistency with naming conventions of Azure resources defined in ARM .json templates
 
-## References: 
-[MSDN documentation about creating multiple ARM resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-multiple)
-
-[What are Azure ARM templates?](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview)
-
 ## How it works?
 For every top-level Azure resource, you'll find a folder that corresponds to the name of that resource. Under this folder you'll find Input and Output folders:
 
@@ -41,3 +36,8 @@ Once the C# logic gets an instance of this root input class, it'll convert the r
 
 ## What ARM template resources are currently supported?
 Namespaces > Queues
+
+## References: 
+[MSDN documentation about creating multiple ARM resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-multiple)
+
+[What are Azure ARM templates?](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview)
